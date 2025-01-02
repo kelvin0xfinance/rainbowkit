@@ -15,6 +15,9 @@ export {
   RainbowKitAuthenticationProvider,
   createAuthenticationAdapter,
 } from './components/RainbowKitProvider/AuthenticationContext';
+export { useWalletConnectors } from './wallets/useWalletConnectors';
+export { useAsyncImage } from './components/AsyncImage/useAsyncImage';
+
 export type {
   Wallet,
   WalletList,

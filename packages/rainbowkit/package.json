@@ -1,6 +1,6 @@
 {
-  "name": "@rainbow-me/rainbowkit",
-  "version": "2.2.1",
+  "name": "@kelvin0xfinance/rainbowkit",
+  "version": "0.0.2",
   "description": "The best way to connect a wallet",
   "files": [
     "dist",
@@ -77,5 +77,8 @@
     "type": "git",
     "url": "git+https://github.com/kelvin0xfinance/rainbowkit",
     "directory": "packages/rainbowkit"
+  },
+  "publishConfig": {
+    "@kelvin0xfinance:registry": "https://npm.pkg.github.com"
   }
 }
