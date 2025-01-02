@@ -44,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rainbow-me/rainbowkit.git",
+    "url": "git+https://github.com/kelvin0xfinance/rainbowkit",
     "directory": "packages/rainbow-button"
   }
 }
