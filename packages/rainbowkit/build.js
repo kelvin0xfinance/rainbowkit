@@ -22,7 +22,7 @@ const getAllEntryPoints = async (rootPath) =>
         !path.includes('.test.'),
     );
 
-const baseBuildConfig = (onEnd) => {
+const baseBuildConfig = (_onEnd) => {
   return {
     banner: {
       js: '"use client";', // Required for Next 13 App Router
@@ -49,20 +49,20 @@ const baseBuildConfig = (onEnd) => {
           return result.css;
         },
       }),
-      {
-        name: 'make-all-packages-external',
-        setup(build) {
-          const filter = /^[^./]|^\.[^./]|^\.\.[^/]/; // Must not start with "/" or "./" or "../"
-          build.onResolve({ filter }, (args) => {
-            return {
-              external: true,
-              path: args.path,
-            };
-          });
+      // {
+      //   name: 'make-all-packages-external',
+      //   setup(build) {
+      //     const filter = /^[^./]|^\.[^./]|^\.\.[^/]/; // Must not start with "/" or "./" or "../"
+      //     build.onResolve({ filter }, (args) => {
+      //       return {
+      //         external: true,
+      //         path: args.path,
+      //       };
+      //     });
 
-          build.onEnd(onEnd);
-        },
-      },
+      //     build.onEnd(onEnd);
+      //   },
+      // },
     ],
     splitting: true, // Required for tree shaking
   };
